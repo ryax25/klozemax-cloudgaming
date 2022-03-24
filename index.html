@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>KlozeMax</title>
+    <!--stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!--swiper-min-css-->
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <!--fav-icon-->
+    <img src="" alt="" />
+    <!--poppins-font-family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--using-FontAwesome-For-Icons-->
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--menu-sidebar-->
+    <nav class="sidebar close">
+      <header>
+          <div class="image-text">
+              <span class="image">
+                  <!--<img src="logo.png" alt="">-->
+              </span>
+
+              <div class="text logo-text">
+                  <span class="name">KlozeMax</span>
+                  <span class="profession">Cloud Games</span>
+              </div>
+          </div>
+
+          <i class='bx bx-chevron-right toggle'></i>
+      </header>
+
+      <div class="menu-bar">
+          <div class="menu">
+
+              <li class="search-box">
+                  <i class='bx bx-search icon'></i>
+                  <input type="text" placeholder="Search...">
+              </li>
+
+              <ul class="menu-links">
+                  <li class="nav-link">
+                      <a href="#">
+                          <i class='bx bx-home-alt icon' ></i>
+                          <span class="text nav-text">Home</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-link">
+                      <a href="#">
+                          <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                          <span class="text nav-text">Top Games</span>
+                      </a>
+                  </li>
+
+                  
+
+                  <li class="nav-link">
+                      <a href="#">
+                          <i class='bx bx-heart icon' ></i>
+                          <span class="text nav-text">Likes</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-link">
+                      <a href="#">
+                          <i class='bx bx-wallet icon' ></i>
+                          <span class="text nav-text">Subscription</span>
+                      </a>
+                  </li>
+
+              </ul>
+          </div>
+
+          <div class="bottom-content">
+              <li class="">
+                  <a href="#">
+                      <i class='bx bx-log-out icon' ></i>
+                      <span class="text nav-text">Logout</span>
+                  </a>
+              </li>
+
+              <li class="mode">
+                  <div class="sun-moon">
+                      <i class='bx bx-moon icon moon'></i>
+                      <i class='bx bx-sun icon sun'></i>
+                  </div>
+                  <span class="mode-text text">Dark mode</span>
+
+                  <div class="toggle-switch">
+                      <span class="switch"></span>
+                  </div>
+              </li>
+              
+          </div>
+      </div>
+
+  </nav>
+
+  <section class="home">
+      <div class="text"></div>
+  </section>
+
+  <script>
+      const body = document.querySelector('body'),
+    sidebar = body.querySelector('nav'),
+    toggle = body.querySelector(".toggle"),
+    searchBtn = body.querySelector(".search-box"),
+    modeSwitch = body.querySelector(".toggle-switch"),
+    modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+  sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+  sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+  body.classList.toggle("dark");
+  
+  if(body.classList.contains("dark")){
+      modeText.innerText = "Light mode";
+  }else{
+      modeText.innerText = "Dark mode";
+      
+  }
+});
+  </script>
+
+    <!--container-->
+    <section id="slider-content">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!--slider-1-->
+          <div class="swiper-slide">
+            <!--slider-box-->
+      <div class="slider-box">
+        <!--img-->
+        <div class="slider-img">
+          <img
+            src="https://cdn2.unrealengine.com/7up-3840x2160-c93d04c02c26.jpg"
+            alt="poster"
+          />
+        </div>
+
+        <!--details-->
+        <div class="slider-details">
+          <!--title-->
+          <strong>Fortnite</strong>
+          <!--rating-->
+          <div class="rating">
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--empty-star-->
+            <a href="#">
+              <i class="far fa-star"></i>
+            </a>
+          </div>
+          <!--movie-details-->
+          <p>
+            ¡ÚNETE A LA RESISTENCIA EN LA BATALLA FINAL PARA LIBERAR EL PUNTO
+            CERO! PRUEBA LAS NUEVAS TÁCTICAS, COMO ESPRINTAR, TREPAR Y MUCHO
+            MÁS. SUBE A BORDO DEL AUTOBÚS DE BATALLA ACORAZADO PARA REALIZAR UNA
+            POTENTE INCURSIÓN O INCORPORA EL DEFLECTOR A TU CAMIÓN PARA EMBESTIR
+            A LO GRANDE. ¡ACABA CON TUS OPONENTES EN EL COMBATE DEFINITIVO POR
+            EL PUNTO CERO DEL CAPÍTULO 3 - TEMPORADA 2: RESISTENCIA
+          </p>
+          <!--btns-->
+          <div class="card-btns">
+            <a href="#" class="play-btn"
+              ><i class="fas fa-play"></i> Play Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+          <!--slider-2-->
+          <div class="swiper-slide">
+            <!--slider-box-->
+      <div class="slider-box">
+        <!--img-->
+        <div class="slider-img">
+          <img
+            src="https://image.api.playstation.com/vulcan/ap/rnd/202202/0721/GVf6B5X9AZGeF0ZOBhq05h8W.png"
+            alt="poster"
+          />
+        </div>
+
+        <!--details-->
+        <div class="slider-details">
+          <!--title-->
+          <strong>Apex Legends</strong>
+          <!--rating-->
+          <div class="rating">
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--empty-star-->
+            <a href="#">
+              <i class="far fa-star"></i>
+            </a>
+          </div>
+          <!--movie-details-->
+          <p>
+            Elige entre un elenco de forajidos, soldados, rebeldes y misántropos, cada uno con sus propias habilidades. Los Juegos Apex están abiertos a todo el mundo. Si sobrevives lo suficiente, te convertirás en una leyenda.
+          </p>
+          <!--btns-->
+          <div class="card-btns">
+            <a href="#" class="play-btn"
+              ><i class="fas fa-play"></i> Play Now</a
+            >
+          </div>
+        </div>
+      </div>
+          </div>
+          <!--slider-3-->
+          <div class="swiper-slide">
+            <!--slider-box-->
+      <div class="slider-box">
+        <!--img-->
+        <div class="slider-img">
+          <img
+            src="https://nation4gamers.com/wp-content/uploads/2021/04/halo-infinite-202072216173826_2-768x976.jpg"
+            alt="poster"
+          />
+        </div>
+
+        <!--details-->
+        <div class="slider-details">
+          <!--title-->
+          <strong>Halo Infinite</strong>
+          <!--rating-->
+          <div class="rating">
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--empty-star-->
+            <a href="#">
+              <i class="far fa-star"></i>
+            </a>
+          </div>
+          <!--movie-details-->
+          <p>
+            Halo Infinite es un videojuego de disparos en primera persona de la franquicia de videojuegos de ciencia ficción creada por Bungie Studios y actualmente desarrollada por 343 Industries.
+          </p>
+          <!--btns-->
+          <div class="card-btns">
+            <a href="#" class="play-btn"
+              ><i class="fas fa-play"></i> Play Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+          </div>
+          <!--slider-4-->
+          <div class="swiper-slide">
+            <!--slider-box-->
+      <div class="slider-box">
+        <!--img-->
+        <div class="slider-img">
+          <img
+            src="https://cdn.alza.cz/Foto/ImgGalery/Image/pubg-keyart.jpg"
+            alt="poster"
+          />
+        </div>
+
+        <!--details-->
+        <div class="slider-details">
+          <!--title-->
+          <strong>Pubg</strong>
+          <!--rating-->
+          <div class="rating">
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--empty-star-->
+            <a href="#">
+              <i class="far fa-star"></i>
+            </a>
+          </div>
+          <!--movie-details-->
+          <p>
+            PUBG es un videojuego de acción en el cual hasta 100 jugadores pelean en una Batalla Real (Battle Royale), un tipo de combate a muerte en el cual hay enfrentamientos para ser el último con vida. Los jugadores pueden ingresar a la partida en solitario, o con un pequeño equipo compuesto por el propio jugador y una, dos o tres personas más, formando respectivamente un dúo, un escuadrón de tres o cuatro jugadores. La última persona o equipo con vida gana la partida.
+          </p>
+          <!--btns-->
+          <div class="card-btns">
+            <a href="#" class="play-btn"
+              ><i class="fas fa-play"></i> Play Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+          </div>
+          <!--slider-5-->
+          <div class="swiper-slide">
+            <!--slider-box-->
+      <div class="slider-box">
+        <!--img-->
+        <div class="slider-img">
+          <img
+            src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/vanguard/meta-images/season-2/wz-vg-s2-meta.jpg"
+            alt="poster"
+          />
+        </div>
+
+        <!--details-->
+        <div class="slider-details">
+          <!--title-->
+          <strong>Warzone</strong>
+          <!--rating-->
+          <div class="rating">
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--empty-star-->
+            <a href="#">
+              <i class="far fa-star"></i>
+            </a>
+          </div>
+          <!--movie-details-->
+          <p>
+            Warzone permite el combate multijugador en línea entre 150 jugadores, aunque algunos modos de juego por tiempo limitado admiten 200 jugadores. El juego presenta tanto un juego multiplataforma como una progresión multiplataforma entre tres juegos.
+          </p>
+          <!--btns-->
+          <div class="card-btns">
+            <a href="#" class="play-btn"
+              ><i class="fas fa-play"></i> Play Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+          </div>
+          <!--slider-6-->
+          <div class="swiper-slide">
+            <!--slider-box-->
+      <div class="slider-box">
+        <!--img-->
+        <div class="slider-img">
+          <img
+            src="https://i.blogs.es/1e33f4/genshin-impact/1366_2000.jpeg"
+            alt="poster"
+          />
+        </div>
+
+        <!--details-->
+        <div class="slider-details">
+          <!--title-->
+          <strong>Genshin Impact</strong>
+          <!--rating-->
+          <div class="rating">
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--empty-star-->
+            <a href="#">
+              <i class="far fa-star"></i>
+            </a>
+          </div>
+          <!--movie-details-->
+          <p>
+            Genshin Impact presenta un entorno de mundo abierto| mundo abierto de estilo anime. Entonces, el presidente de miHoYo, Cai Haoyu, dijo: " Creando un mundo abierto al estilo anime. Nuestro objetivo es garantizar que los personajes se vean tan bien como el dibujo conceptual original del personaje. revisamos el personaje con un modelo 3D desde una perspectiva en el juego para asegurarnos de que se vea exactamente igual que el dibujo conceptual original"
+          </p>
+          <!--btns-->
+          <div class="card-btns">
+            <a href="#" class="play-btn"
+              ><i class="fas fa-play"></i> Play Now</a
+            >
+          </div>
+        </div>
+      </div>
+          </div>
+          <!--slider-7-->
+          <div class="swiper-slide">
+            <!--slider-box-->
+      <div class="slider-box">
+        <!--img-->
+        <div class="slider-img">
+          <img
+            src="https://i.blogs.es/081814/counter-strike/1366_2000.jpeg"
+            alt="poster"
+          />
+        </div>
+
+        <!--details-->
+        <div class="slider-details">
+          <!--title-->
+          <strong>Counter Strike: Global Offensive</strong>
+          <!--rating-->
+          <div class="rating">
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--empty-star-->
+            <a href="#">
+              <i class="far fa-star"></i>
+            </a>
+          </div>
+          <!--movie-details-->
+          <p>
+            La acción de Counter-Strike se desarrolla en rondas de una duración elegida por el que las crea, en la cual un equipo de terroristas (T) se enfrenta a un equipo de antiterroristas (CT). El equipo victorioso es el que cumpla todos sus objetivos de victoria, de situación o la eliminación de todos los jugadores del otro equipo. Si al final de la ronda no hay victoria directa de uno de los dos equipos, el equipo que no realizó sus objetivos pierde por eliminación.
+          </p>
+          <!--btns-->
+          <div class="card-btns">
+            <a href="#" class="play-btn"
+              ><i class="fas fa-play"></i> Play Now</a
+            >
+          </div>
+        </div>
+      </div>
+          </div>
+          <!--slider-8-->
+          <div class="swiper-slide">
+            <!--slider-box-->
+      <div class="slider-box">
+        <!--img-->
+        <div class="slider-img">
+          <img
+            src="https://i0.wp.com/hipertextual.com/wp-content/uploads/2020/05/hipertextual-descarga-gratis-gta-v-epic-games-store-hoy-es-ultimo-dia-2020473701.jpg?fit=1920%2C1080&ssl=1"
+            alt="poster"
+          />
+        </div>
+
+        <!--details-->
+        <div class="slider-details">
+          <!--title-->
+          <strong>Grand Theft Auto V</strong>
+          <!--rating-->
+          <div class="rating">
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--empty-star-->
+            <a href="#">
+              <i class="far fa-star"></i>
+            </a>
+          </div>
+          <!--movie-details-->
+          <p>
+            En el año 2004, Michael Townley, Trevor Philips y Brad Snider eran ladrones de bancos que vivían en Ludendorff, en el estado de North Yankton (basado en Dakota del Norte). Michael, queriendo huir de esa vida entonces, planea un atraco falso junto al agente federal corrupto Dave Norton (Dave tenía que matar a Trevor y arrestar a Brad mientras Michael fingía su muerte). Pero todo sale mal porque Dave en vez de dispararle a Trevor, dispara a Brad y Trevor escapa. Michael es dado por muerto y es llevado con su familia a Los Santos (San Andreas) con una nueva identidad: «Michael De Santa».
+          </p>
+          <!--btns-->
+          <div class="card-btns">
+            <a href="#" class="play-btn"
+              ><i class="fas fa-play"></i> Play Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+          </div>
+          <!--slider-9-->
+          <div class="swiper-slide">
+            <!--slider-box-->
+      <div class="slider-box">
+        <!--img-->
+        <div class="slider-img">
+          <img
+            src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt49fdf32e97b85558/61a6e8b1b71bc0412dac43ac/120721_Patch_11_24_Notes_Banner.jpg"
+            alt="poster"
+          />
+        </div>
+
+        <!--details-->
+        <div class="slider-details">
+          <!--title-->
+          <strong>League of Legends.</strong>
+          <!--rating-->
+          <div class="rating">
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--full-star-->
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <!--empty-star-->
+            <a href="#">
+              <i class="far fa-star"></i>
+            </a>
+          </div>
+          <!--movie-details-->
+          <p>
+            El juego consta de 3 modos actuales de juego en ejecución: La Grieta del Invocador, El Abismo de los Lamentos y Teamfight Tactics.8​ Los jugadores compiten en partidas, que duran entre 15 y 50 minutos en promedio. En cada modo de juego, los equipos trabajan juntos para lograr una condición de victoria, normalmente destruyendo la estructura central (llamado Nexo) en la base del equipo enemigo después de pasar por alto una línea de estructuras defensivas llamadas Torretas. En todos los modos de juego, los jugadores controlan personajes llamados «campeones», elegidos o asignados en cada partida, que tienen un conjunto de habilidades únicas, con los cuales jugarán toda la partida hasta su conclusión. Desde febrero de 2022, hay 159 campeones disponibles, siendo la última añadida Renata Glasc, la Quimobaronesa.
+          </p>
+          <!--btns-->
+          <div class="card-btns">
+            <a href="#" class="play-btn"
+              ><i class="fas fa-play"></i> Play Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      
+    <!--swiper.min.js---->
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true
+        },
+        pagination: {
+          el: ".swiper-pagination"
+        }
+      });
+    </script>
+  </body>
+</html>
